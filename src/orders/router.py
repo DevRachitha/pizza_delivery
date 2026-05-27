@@ -42,3 +42,7 @@ def update_order_status(body:OrderStatusUpdate,order_id:int,db=Depends(get_db),u
 @order_router.delete('/order/delete/{order_id}')
 def delete_order(order_id:int,db=Depends(get_db),user:UserModel=Depends(is_authenticated)):
     return controllers.delete_order(order_id,db,user)
+
+@order_router.get('/order')
+def testing_git():
+    pass
